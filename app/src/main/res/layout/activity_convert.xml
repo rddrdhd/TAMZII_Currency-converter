@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -31,8 +31,7 @@
                     android:id="@+id/imageView1"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/flag_cz" />
+                    android:layout_gravity="center_vertical" />
             </FrameLayout>
 
             <LinearLayout
@@ -85,6 +84,7 @@
                         android:gravity="center_vertical"
                         android:text="1.00"
                         android:textColor="#FFFFFF" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -109,6 +109,7 @@
                         android:textSize="36sp" />
 
                 </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>
@@ -130,7 +131,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
-            android:src="@android:drawable/sym_def_app_icon" />
+            android:src="@mipmap/ic_launcher" />
 
         <EditText
             android:id="@+id/editNum2"
@@ -160,8 +161,7 @@
                     android:id="@+id/imageView2"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/flag_cz" />
+                    android:layout_gravity="center_vertical" />
             </FrameLayout>
 
             <LinearLayout
@@ -212,7 +212,7 @@
                         android:layout_marginTop="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center_vertical"
-                        android:text="16sp"
+                        android:text="1.00"
                         android:textColor="#FFFFFF" />
                 </LinearLayout>
 
@@ -238,8 +238,11 @@
                         android:textSize="36sp" />
 
                 </LinearLayout>
+
             </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

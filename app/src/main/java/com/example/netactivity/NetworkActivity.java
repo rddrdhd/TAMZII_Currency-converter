@@ -44,7 +44,7 @@ import java.util.List;
  *
  * This activity does the following:
  *
-  * o Parses the CNB XML feed using XMLPullParser.
+ * o Parses the CNB XML feed using XMLPullParser.
  *
  * o Uses AsyncTask to download and process the XML feed.
  *

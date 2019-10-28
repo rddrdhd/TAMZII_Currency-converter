@@ -65,7 +65,7 @@ public class CNBXmlParser {
 
     // Parses the contents of an entry. If it encounters a title, summary, or link tag, hands them
     // off
-    // to their respective &quot;read&quot; methods for processing. Otherwise, skips the tag.
+    // to their respective "read" methods for processing. Otherwise, skips the tag.
   
     private Entry readEntry(XmlPullParser parser) throws XmlPullParserException, IOException {
         parser.require(XmlPullParser.START_TAG, ns, "radek");
@@ -95,11 +95,9 @@ public class CNBXmlParser {
                     kurz = parser.getAttributeValue(i).replace(',','.');
                 }
 
-
             	//  tudu 2. - Zde je potreba dopsat naplneni dalsich udaju pro kazdou menu
                 //  2. - Vzhledem k tomu, ze kazdy radek listu men je reprezetovan konkretni instaci tridy Entry, je zde take take potreba vlozit spravne parametry do konstruktoru teto tridy
                 //  2. - V tomto okamziku se cte ze souboru .xml pouze KOD meny a proto se na konci bloku vola "return new Entry(kod)"
-            	
         }
             
         parser.next();
