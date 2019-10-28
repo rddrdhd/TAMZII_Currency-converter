@@ -15,27 +15,231 @@
         tools:layout_editor_absoluteY="256dp">
 
         <LinearLayout
+            android:id="@+id/layoutMena1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="200dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <FrameLayout
+                android:layout_width="148dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/flag_cz" />
+            </FrameLayout>
+
+            <LinearLayout
+                style="@android:style/Widget.Holo.DropDownItem"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:background="#FF1D1D1D"
+                android:baselineAligned="true"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/txtStat1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:gravity="center_vertical"
+                        android:text="Česká republika"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtNazev1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:gravity="center_vertical"
+                        android:text="koruna"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtCena1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:gravity="center_vertical"
+                        android:text="1.00"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+
+                    <TextView
+                        android:id="@+id/txtKod1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="CZK"
+                        android:textColor="#FFFFFF"
+                        android:textSize="36sp" />
+
+                </LinearLayout>
+            </LinearLayout>
 
         </LinearLayout>
 
         <EditText
-            android:id="@+id/editText2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/editNum1"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="numberDecimal" />
+            android:gravity="bottom|center_horizontal"
+            android:inputType="numberDecimal"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:src="@android:drawable/sym_def_app_icon" />
 
         <EditText
-            android:id="@+id/editText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/editNum2"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="numberDecimal" />
+            android:gravity="bottom|center_horizontal"
+            android:inputType="numberDecimal"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
+
+        <LinearLayout
+            android:id="@+id/layoutMena2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <FrameLayout
+                android:layout_width="148dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/flag_cz" />
+            </FrameLayout>
+
+            <LinearLayout
+                style="@android:style/Widget.Holo.DropDownItem"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:background="#FF1D1D1D"
+                android:baselineAligned="true"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/txtStat2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:gravity="center_vertical"
+                        android:text="Česká republika"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtNazev2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:gravity="center_vertical"
+                        android:text="koruna"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtCena2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:gravity="center_vertical"
+                        android:text="16sp"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+
+                    <TextView
+                        android:id="@+id/txtKod2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="CZK"
+                        android:textColor="#FFFFFF"
+                        android:textSize="36sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
