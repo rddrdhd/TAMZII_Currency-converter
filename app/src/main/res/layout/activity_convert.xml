@@ -31,7 +31,8 @@
                     android:id="@+id/imageView1"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:layout_gravity="center_vertical" />
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/ic_launcher" />
             </FrameLayout>
 
             <LinearLayout
@@ -123,15 +124,16 @@
             android:gravity="bottom|center_horizontal"
             android:inputType="numberDecimal"
             android:textColor="#FFFFFF"
-            android:textSize="36sp" />
+            android:textSize="50sp" />
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@drawable/swap_arrows"
+            android:onClick="swap"/>
 
         <EditText
             android:id="@+id/editNum2"
@@ -142,7 +144,7 @@
             android:gravity="bottom|center_horizontal"
             android:inputType="numberDecimal"
             android:textColor="#FFFFFF"
-            android:textSize="36sp" />
+            android:textSize="50sp" />
 
         <LinearLayout
             android:id="@+id/layoutMena2"
@@ -161,7 +163,8 @@
                     android:id="@+id/imageView2"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:layout_gravity="center_vertical" />
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/ic_launcher" />
             </FrameLayout>
 
             <LinearLayout

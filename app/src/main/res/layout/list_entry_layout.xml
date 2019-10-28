@@ -70,7 +70,7 @@
                 android:layout_marginTop="1dp"
                 android:layout_marginBottom="1dp"
                 android:gravity="center_vertical"
-                android:text="16sp"
+                android:text="1.00"
                 android:textColor="#FFFFFF" />
         </LinearLayout>
 

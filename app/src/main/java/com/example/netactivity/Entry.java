@@ -6,7 +6,7 @@ public class Entry {
     public final String kod;
     public String mena;
     public String stat;
-    public double cena;
+    public Double cena;
  
     // tudu 3. Rozsirit dalsi udaje ve tride, ktere se budou vest pro kazdou menu
     //  3. To zahrnuje i upraveni konstruktoru
