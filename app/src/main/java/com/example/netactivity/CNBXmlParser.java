@@ -96,9 +96,9 @@ public class CNBXmlParser {
                 }
 
 
-            	// TODO 2. - Zde je potreba dopsat naplneni dalsich udaju pro kazdou menu
-                // TODO 2. - Vzhledem k tomu, ze kazdy radek listu men je reprezetovan konkretni instaci tridy Entry, je zde take take potreba vlozit spravne parametry do konstruktoru teto tridy
-                // TODO 2. - V tomto okamziku se cte ze souboru .xml pouze KOD meny a proto se na konci bloku vola "return new Entry(kod)"
+            	//  tudu 2. - Zde je potreba dopsat naplneni dalsich udaju pro kazdou menu
+                //  2. - Vzhledem k tomu, ze kazdy radek listu men je reprezetovan konkretni instaci tridy Entry, je zde take take potreba vlozit spravne parametry do konstruktoru teto tridy
+                //  2. - V tomto okamziku se cte ze souboru .xml pouze KOD meny a proto se na konci bloku vola "return new Entry(kod)"
             	
         }
             

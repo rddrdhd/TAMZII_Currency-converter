@@ -8,8 +8,8 @@ public class Entry {
     public String stat;
     public double cena;
  
-    // TODO 3. Rozsirit dalsi udaje ve tride, ktere se budou vest pro kazdou menu
-    // TODO 3. To zahrnuje i upraveni konstruktoru
+    // tudu 3. Rozsirit dalsi udaje ve tride, ktere se budou vest pro kazdou menu
+    //  3. To zahrnuje i upraveni konstruktoru
             
     Entry(String mena, String kod, String stat, double cena) {
         this.kod = kod;
