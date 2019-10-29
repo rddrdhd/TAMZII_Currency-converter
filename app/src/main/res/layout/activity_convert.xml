@@ -132,7 +132,7 @@
             android:layout_height="100dp"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
-            android:src="@drawable/swap_arrows"
+            android:src="@drawable/ic_launcher"
             android:onClick="swap"/>
 
         <EditText

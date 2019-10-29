@@ -2,7 +2,9 @@ package com.example.netactivity;
 
 import android.content.Context;
 
-public class Entry {
+import java.io.Serializable;
+
+public class Entry implements Serializable {
     public final String kod;
     public String mena;
     public String stat;

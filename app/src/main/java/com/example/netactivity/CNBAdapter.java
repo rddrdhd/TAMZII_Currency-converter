@@ -1,5 +1,6 @@
 package com.example.netactivity;
 
+import java.io.Serializable;
 import java.util.List;
 import android.content.Context;
 import android.content.Intent;
@@ -84,6 +85,7 @@ public class CNBAdapter extends ArrayAdapter<Entry>{
                     i.putExtra("kod", entry.kod );
                     i.putExtra("stat", entry.stat );
                     i.putExtra("cena", cena );
+                    i.putExtra("row", entry);
                     context.startActivity(i);
                 }
                 return true;
@@ -93,7 +95,7 @@ public class CNBAdapter extends ArrayAdapter<Entry>{
         return row;
     }
 
-   
+
     static class EntryHolder
     {
         TextView txtKod;

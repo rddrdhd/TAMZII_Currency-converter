@@ -43,31 +43,14 @@ public class ConvertActivity extends Activity {
         editNum1.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-        /*    //clicked currency values
-            String kod = extras.getString("kod");
-            String imgName = "flag_"+kod.toLowerCase();
-            int id = getApplicationContext().getResources().getIdentifier(imgName, "drawable", getApplicationContext().getPackageName());
-            vlajka2.setImageResource(id);
-            //cz
-            Entry cz = new Entry("koruna","CZK","Česká republika",1.0);
-
-            txtCena1.setText(swapped?extras.getString("cena"):Double.toString(cz.cena));
-            txtStat1.setText(swapped?extras.getString("stat"):cz.stat);
-            txtKod1.setText(swapped?kod:cz.kod);
-            txtNazev1.setText(swapped?extras.getString("nazev"):cz.mena);
-            vlajka1.setImageResource(R.drawable.flag_cz);
-
-
-            txtCena2.setText(swapped?Double.toString(cz.cena):extras.getString("cena"));
-            txtStat2.setText(swapped?cz.stat:extras.getString("stat"));
-            txtKod2.setText(swapped?cz.kod:kod);
-            txtNazev2.setText(swapped?cz.mena:extras.getString("nazev"));*/
             }
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
+                if (editNum1.getText().toString().length() == 0) {
+                    editNum1.setText("0");
+                }
             }
 
             @Override
@@ -103,6 +86,8 @@ public class ConvertActivity extends Activity {
             txtStat2.setText(extras.getString("stat"));
             txtKod2.setText(kod);
             txtNazev2.setText(extras.getString("nazev"));
+            Entry row = (Entry) extras.getSerializable("row");
+            //txtNazev2.setText(row.mena);
         }
     }
 
