@@ -20,12 +20,12 @@ public class ConvertActivity extends Activity {
         setContentView(R.layout.activity_convert);
 
         final EditText editNum1, editNum2;
-        TextView txtStat1, txtNazev1, txtCena1, txtKod1,
+        final TextView txtStat1, txtNazev1, txtCena1, txtKod1,
                 txtStat2, txtNazev2, txtCena2, txtKod2;
-        ImageView vlajka1, vlajka2;
+        final ImageView vlajka1, vlajka2;
 
 
-        Bundle extras = getIntent().getExtras();
+        final Bundle extras = getIntent().getExtras();
 
         editNum1 = findViewById(R.id.editNum1);
         editNum2 = findViewById(R.id.editNum2);
@@ -40,60 +40,89 @@ public class ConvertActivity extends Activity {
         vlajka1 = findViewById(R.id.imageView1);
         vlajka2 = findViewById(R.id.imageView2);
 
-        editNum1.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+        final Entry cz = new Entry("koruna","CZK","Česká republika",1.00);
+        final String currencyCode = extras.getString("kod");
+        final String imgName = "flag_"+currencyCode.toLowerCase();
+        final int anotherId = getApplicationContext().getResources().getIdentifier(imgName, "drawable", getApplicationContext().getPackageName());
+
+
+    editNum1.addTextChangedListener(new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            if(!swapped) {
+                txtCena1.setText(Double.toString(cz.cena));
+                txtStat1.setText(cz.stat);
+                txtKod1.setText(cz.kod);
+                txtNazev1.setText(cz.mena);
+                vlajka1.setImageResource(R.drawable.flag_cz);
+
+                vlajka2.setImageResource(anotherId);
+                txtCena2.setText(extras.getString("cena"));
+                txtStat2.setText(extras.getString("stat"));
+                txtKod2.setText(currencyCode);
+                txtNazev2.setText(extras.getString("nazev"));
+
+
+            } else {  //clicked currency values
+
+                vlajka1.setImageResource(anotherId);
+                txtCena1.setText(extras.getString("cena"));
+                txtStat1.setText(extras.getString("stat"));
+                txtKod1.setText(currencyCode);
+                txtNazev1.setText(extras.getString("nazev"));
+
+                txtCena1.setText(Double.toString(cz.cena));
+                txtStat2.setText(cz.stat);
+                txtKod2.setText(cz.kod);
+                txtNazev2.setText(cz.mena);
+                vlajka2.setImageResource(R.drawable.flag_cz);
+
+            }}
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            if (editNum1.getText().toString().length() == 0) {
+                editNum1.setText("0");
             }
+        }
 
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+        @Override
+        public void afterTextChanged(Editable editable) {
+            Bundle extras = getIntent().getExtras();
+            Double czk = Double.valueOf(editNum1.getText().toString());
+            Double kurz = Double.valueOf(extras.getString("cena"));
+            double hodnota = swapped? czk/kurz : czk*kurz;
 
-                if (editNum1.getText().toString().length() == 0) {
-                    editNum1.setText("0");
-                }
-            }
+            editNum2.setText(Double.toString(hodnota));
+        }
+    });
 
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-                Bundle extras = getIntent().getExtras();
-                Double czk = Double.valueOf(editNum1.getText().toString());
-                Double kurz = Double.valueOf(extras.getString("cena"));
-
-                editNum2.setText(Double.toString(czk/kurz));
-            }
-        });
 
 
         if(extras == null) {
             Toast.makeText(getApplicationContext(),"Neco se pokazilo, sorka", Toast.LENGTH_LONG).show();
         } else {
-            Entry cz = new Entry("koruna","CZK","Česká republika",1.00);
-            //TODO set (czk?) values
-            txtCena1.setText(Double.toString(cz.cena));
-            txtStat1.setText(cz.stat);
-            txtKod1.setText(cz.kod);
-            txtNazev1.setText(cz.mena);
-            vlajka1.setImageResource(R.drawable.flag_cz);
 
-            //clicked currency values
-            String kod = extras.getString("kod");
-            String imgName = "flag_"+kod.toLowerCase();
-            int id = getApplicationContext().getResources().getIdentifier(imgName, "drawable", getApplicationContext().getPackageName());
-            vlajka2.setImageResource(id);
+                txtCena1.setText(Double.toString(cz.cena));
+                txtStat1.setText(cz.stat);
+                txtKod1.setText(cz.kod);
+                txtNazev1.setText(cz.mena);
+                vlajka1.setImageResource(R.drawable.flag_cz);
 
-            txtCena2.setText(extras.getString("cena"));
-            txtStat2.setText(extras.getString("stat"));
-            txtKod2.setText(kod);
-            txtNazev2.setText(extras.getString("nazev"));
-            Entry row = (Entry) extras.getSerializable("row");
-            //txtNazev2.setText(row.mena);
+                vlajka2.setImageResource(anotherId);
+                txtCena2.setText(extras.getString("cena"));
+                txtStat2.setText(extras.getString("stat"));
+                txtKod2.setText(currencyCode);
+                txtNazev2.setText(extras.getString("nazev"));
+
         }
     }
 
     public void swap(View view){
             swapped=!swapped;
-            Toast.makeText(getApplicationContext(),"swapped!",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"swapped!"+swapped,Toast.LENGTH_SHORT).show();
+
     }
 
 }
